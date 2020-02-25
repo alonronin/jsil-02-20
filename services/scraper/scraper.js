@@ -7,8 +7,7 @@ const options = {
   args,
   executablePath,
   headless,
-  ignoreHTTPSErrors: true,
-  userDataDir: './tmp'
+  ignoreHTTPSErrors: true
 };
 
 module.exports = async url => {
