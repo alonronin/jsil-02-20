@@ -10,6 +10,9 @@ We want to post a `url`, scrape the site and extract its meaningful content.
 ### Demo
 https://static-bwvy2exxkq-ew.a.run.app
 
+### Screenshot
+![Infinite Scale With CloudRun and Node.js](./screenshot.png)
+
 ### The Architecture
 
 Micro-services, taking with each other via REST http requests.
