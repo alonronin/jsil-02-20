@@ -15,7 +15,7 @@ https://static-bwvy2exxkq-ew.a.run.app
 
 ### The Architecture
 
-Micro-services, taking with each other via REST http requests.
+Micro-services, talking with each other via REST http requests.
 
 1. `Scraper` - private service to scrape a site with puppeteer.
 2. `Parser` - private service to extract meaningful content from html.
