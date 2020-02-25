@@ -6,9 +6,11 @@
     "lib/*"
   ],
   "scripts": {
-    "start-all": "yarn workspace api dev & yarn workspace parser dev & yarn workspace scraper dev & yarn workspace static dev"
+    "start-all": "cross-env PORT=9000 DEBUG=api:?* yarn workspace api dev & cross-env PORT=10000 DEBUG=parser:?* yarn workspace parser dev & cross-env PORT=20000 DEBUG=scraper:?* yarn workspace scraper dev & yarn workspace static dev"
   },
   "devDependencies": {
+    "cross-env": "^7.0.0",
+    "nodemon": "^2.0.2",
     "prettier": "^1.19.1"
   },
   "prettier": {

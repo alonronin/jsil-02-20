@@ -9,8 +9,5 @@
   },
   "dependencies": {
     "@postlight/mercury-parser": "^2.2.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
   }
 }
