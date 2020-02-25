@@ -6,7 +6,7 @@ steps:
       - -t
       - gcr.io/jsil-0220/static:$REVISION_ID
       - -f
-      - services/static/Dockerfile
+      - front/static/Dockerfile
       - .
   - id: push
     name: gcr.io/cloud-builders/docker
