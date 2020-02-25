@@ -1,0 +1,31 @@
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - gcr.io/jsil-0220/parser:$REVISION_ID
+      - -f
+      - services/parser/Dockerfile
+      - .
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - gcr.io/jsil-0220/parser:$REVISION_ID
+  - id: deploy
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - beta
+      - run
+      - deploy
+      - parser
+      - --image
+      - gcr.io/jsil-0220/parser:$REVISION_ID
+      - --region
+      - europe-west1
+      - --platform
+      - managed
+      - --no-allow-unauthenticated
+      - --set-env-vars
+      - DEBUG=parser:?*,NODE_ENV=production

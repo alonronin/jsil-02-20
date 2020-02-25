@@ -1,0 +1,35 @@
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - gcr.io/jsil-0220/scraper:$REVISION_ID
+      - -f
+      - services/scraper/Dockerfile
+      - .
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - gcr.io/jsil-0220/scraper:$REVISION_ID
+  - id: deploy
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - beta
+      - run
+      - deploy
+      - scraper
+      - --image
+      - gcr.io/jsil-0220/scraper:$REVISION_ID
+      - --region
+      - europe-west1
+      - --platform
+      - managed
+      - --no-allow-unauthenticated
+      - --concurrency
+      - '10'
+      - --memory
+      - 1Gi
+      - --set-env-vars
+      - DEBUG=scraper:?*,NODE_ENV=production,HEADLESS=1,PARSER=https://parser-bwvy2exxkq-ew.a.run.app

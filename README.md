@@ -8,7 +8,7 @@ Infinite Scale with Node.js and CloudRun
 We want to post a `url`, scrape the site and extract its meaningful content.
 
 ### Demo
-
+https://static-bwvy2exxkq-ew.a.run.app
 
 ### The Architecture
 

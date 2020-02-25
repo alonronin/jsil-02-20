@@ -1,0 +1,31 @@
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - gcr.io/jsil-0220/api:$REVISION_ID
+      - -f
+      - services/api/Dockerfile
+      - .
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - gcr.io/jsil-0220/api:$REVISION_ID
+  - id: deploy
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - beta
+      - run
+      - deploy
+      - api
+      - --image
+      - gcr.io/jsil-0220/api:$REVISION_ID
+      - --region
+      - europe-west1
+      - --platform
+      - managed
+      - --allow-unauthenticated
+      - --set-env-vars
+      - DEBUG=api:?*,NODE_ENV=production,SCRAPER=https://scraper-bwvy2exxkq-ew.a.run.app

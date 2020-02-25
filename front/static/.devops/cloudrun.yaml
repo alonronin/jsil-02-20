@@ -1,0 +1,31 @@
+steps:
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - gcr.io/jsil-0220/static:$REVISION_ID
+      - -f
+      - services/static/Dockerfile
+      - .
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - gcr.io/jsil-0220/static:$REVISION_ID
+  - id: deploy
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - beta
+      - run
+      - deploy
+      - static
+      - --image
+      - gcr.io/jsil-0220/static:$REVISION_ID
+      - --region
+      - europe-west1
+      - --platform
+      - managed
+      - --allow-unauthenticated
+      - --set-env-vars
+      - DEBUG=static:?*,NODE_ENV=production,API=https://api-bwvy2exxkq-ew.a.run.app
