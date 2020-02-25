@@ -27,7 +27,7 @@ const App = () => {
       <h1>JS-IL 02/2020 - Infinite scale with Node.js and CloudRun</h1>
 
       <form onSubmit={e => onSubmit(e, setData, setLoading)}>
-        <input type="url" name="url" />
+        <input type="url" name="url" defaultValue="https://example.com" />
         <button>Go</button>
       </form>
 

@@ -3,6 +3,8 @@
 
 body {
   font-family: Lato, sans-serif;
+  font-size: 16px;
+  background: #333;
 }
 
 .container {
@@ -10,26 +12,51 @@ body {
   margin: auto;
 }
 
+h1 {
+  color: #ccc;
+}
 form {
   display: flex;
 }
 
 form input {
-  padding: 5px 10px;
+  padding: 1em 2em;
+  font-size: 1.25em;
   flex: 1;
+  border-radius: 0.5em 0 0 0.5em;
+  border: 3px solid deeppink;
+  background: #555;
+  color: #fff;
+}
+
+form button {
+  padding: 1em;
+  font-size: 1.25em;
+  border-radius: 0 0.5em 0.5em 0;
+  cursor: pointer;
+  background: deeppink;
+  border: 3px solid deeppink;
+  color: #fff;
+  font-weight: bold;
 }
 
 pre {
   overflow: auto;
 }
 
+code {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
 .loading {
-    margin: 20px 0;
+  margin: 1em 0;
   text-align: center;
-  line-height: 80px;
-  background: #333333;
+  line-height: 3em;
+  font-size: 2em;
+  background: #222;
   color: #eeeeee;
-  border-radius: 3px;
+  border-radius: 0.25em;
 
   animation: loading 1s ease-in-out infinite;
 }
