@@ -5,6 +5,9 @@
     "services/*",
     "lib/*"
   ],
+  "scripts": {
+    "start-all": "yarn workspace api dev & yarn workspace parser dev & yarn workspace scraper dev & yarn workspace static dev"
+  },
   "devDependencies": {
     "prettier": "^1.19.1"
   },
