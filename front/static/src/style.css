@@ -1,0 +1,44 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+@import 'https://fonts.googleapis.com/css?family=Lato&display=swap';
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  padding: 5px 10px;
+  flex: 1;
+}
+
+pre {
+  overflow: auto;
+}
+
+.loading {
+    margin: 20px 0;
+  text-align: center;
+  line-height: 80px;
+  background: #333333;
+  color: #eeeeee;
+  border-radius: 3px;
+
+  animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
