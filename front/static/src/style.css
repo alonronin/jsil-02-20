@@ -8,19 +8,21 @@ body {
 }
 
 .container {
-  width: 80%;
-  margin: auto;
+  max-width: 980px;
+  padding: 0 1em;
+  margin: 0 auto;
 }
 
 h1 {
   color: #ccc;
 }
+
 form {
   display: flex;
 }
 
 form input {
-  padding: 1em 2em;
+  padding: 1em;
   font-size: 1.25em;
   flex: 1;
   border-radius: 0.5em 0 0 0.5em;

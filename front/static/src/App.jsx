@@ -14,9 +14,8 @@ const onSubmit = async (e, setData, setLoading) => {
   setLoading(false);
 };
 
-const Loading = ({ loading, children }) => (loading ? <div
- className='loading'
->Loading...</div> : children);
+const Loading = ({ loading, children }) =>
+  loading ? <div className="loading">Loading...</div> : children;
 
 const App = () => {
   const [data, setData] = useState({});
