@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode production -p --compress --disable-host-check --host 0.0.0.0 --port 8080 --history-fallback --progress",
+    "prestart": "webpack --mode production -p",
+    "start": "serve dist -l 8080 -s",
     "dev": "webpack-dev-server --mode development -d --host 0.0.0.0 --port 8080  --hot --inline --history-fallback --progress"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "serve": "^11.3.0"
   }
 }
