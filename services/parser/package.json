@@ -1,0 +1,16 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "main": "www",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon --exec node -r dotenv/config ."
+  },
+  "dependencies": {
+    "@postlight/mercury-parser": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

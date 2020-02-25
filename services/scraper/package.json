@@ -1,0 +1,17 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "main": "www",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon --exec node -r dotenv/config ."
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

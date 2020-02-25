@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "front/*",
+    "services/*",
+    "lib/*"
+  ],
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
