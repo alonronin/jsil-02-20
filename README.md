@@ -3,6 +3,8 @@ Infinite Scale with Node.js and CloudRun
 
 > My JavaScript Israel lecture at 02/2020 event demo code.
 
+https://youtu.be/-ZkAj0aZrYc
+
 ### The Application
 
 We want to post a `url`, scrape the site and extract its meaningful content.
